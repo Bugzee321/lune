@@ -1,0 +1,26 @@
+<h1>All Movies</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Release Year</th>
+    <th>Director</th>
+    <th>Actors</th>
+    <th>stars</th>
+    <!-- Add more columns as needed -->
+  </tr>
+  </thead>
+  <tbody>
+  <% @movies.each do |movie| %>
+    <tr>
+      <td><%= movie.title %></td>
+      <td><%= movie.year %></td>
+      <td><%= movie.director %></td>
+      <td><%= movie.actors.pluck(:name).join(', ') %></td>
+      <td><%= movie.average_stars %></td>
+      <!-- Add more columns as needed -->
+    </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: reviews
+#
+#  id         :bigint           not null, primary key
+#  review     :text
+#  stars      :integer
+#  user       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  movie_id   :integer
+#
+
+one:
+  movie_id: 1
+  user: MyString
+  stars: 1
+  review: MyText
+
+two:
+  movie_id: 1
+  user: MyString
+  stars: 1
+  review: MyText

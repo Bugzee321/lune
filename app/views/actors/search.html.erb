@@ -1,0 +1,19 @@
+<h1>Actors#search</h1>
+<%= form_with(url: search_actors_path, method: "get", local: true) do |form| %>
+  <%= form.text_field :query, placeholder: "Enter actor name..." %>
+  <%= form.submit "Search" %>
+<% end %>
+
+
+<!-- app/views/actors/search.html.erb -->
+<h1>Search Results</h1>
+
+<% if @actors.any? %>
+  <ul>
+    <% @actors.each do |actor| %>
+      <li><%= actor.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No actors found.</p>
+<% end %>
